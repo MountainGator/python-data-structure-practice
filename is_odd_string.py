@@ -27,5 +27,20 @@ def is_odd_string(word):
         >>> is_odd_string('amazing')
         True
     """
-
+    alpha = 'abcdefghijklmnopqrstuvwxyz'
+    count = int()
+    for char in word:
+        idx = alpha.find(char.lower()) + 1
+        count += idx
+    
+    if count % 2 == 0:
+        return False
+    else:
+        return True
     # Hint: you may find the ord() function useful here
+    # ^^^ didn't use it, and still solved the exercise lol!!! get rekt :P
+print(is_odd_string('a'))
+print(is_odd_string('A'))
+print(is_odd_string('aaaa'))
+print(is_odd_string('AAaa'))
+print(is_odd_string('amazing'))

@@ -11,5 +11,3 @@ def compact(lst):
     return newb
     
 print(compact([0, 1, 2, '', [], False, (), None, 'All done']))
-
-# bool(item) == False or 
