@@ -14,10 +14,8 @@ def find_factors(num):
     [1, 293, 1097, 321421]
     """
 
-    newb = list()
-    for i in range(1, num + 1):
-       if num % i == 0:
-           newb.append(i)
+    newb = [x for x in range(1, num +1) if num % x == 0]
+    
     return newb
 
 print(find_factors(10))

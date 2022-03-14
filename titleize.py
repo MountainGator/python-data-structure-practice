@@ -1,3 +1,6 @@
+from os import sep
+
+
 def titleize(phrase):
     """Return phrase in title case (each word capitalized).
 
@@ -7,3 +10,8 @@ def titleize(phrase):
         >>> titleize('oNLy cAPITALIZe fIRSt')
         'Only Capitalize First'
     """
+    return ' '.join([f'{x[0].upper()}{x[1:].lower()}' for x in phrase.split(' ')])
+
+print(titleize('this is awesome'))
+print(titleize('oNLy cAPITALIZe fIRSt'))
+
